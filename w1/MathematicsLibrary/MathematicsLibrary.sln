@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathematicsLibrary", "MathematicsLibrary\MathematicsLibrary.csproj", "{D8CBE40E-6A5F-40A6-B2BC-E9D0DD965A70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathematicsLibrary.Tests", "MathematicsLibrary.Tests\MathematicsLibrary.Tests.csproj", "{46115C32-90AF-489B-97A0-B3F65F259392}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathematicsLibrary.Tests", "MathematicsLibrary.Tests\MathematicsLibrary.Tests.csproj", "{46115C32-90AF-489B-97A0-B3F65F259392}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathematicsLibrary.Console", "MathematicsLibrary.Console\MathematicsLibrary.Console.csproj", "{F44E9141-7BD0-4F50-9447-B2F5FCD377CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{46115C32-90AF-489B-97A0-B3F65F259392}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46115C32-90AF-489B-97A0-B3F65F259392}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46115C32-90AF-489B-97A0-B3F65F259392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F44E9141-7BD0-4F50-9447-B2F5FCD377CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44E9141-7BD0-4F50-9447-B2F5FCD377CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44E9141-7BD0-4F50-9447-B2F5FCD377CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F44E9141-7BD0-4F50-9447-B2F5FCD377CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
