@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MathematicsLibrary.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "add 1 2"
+    }
+  }
+}
