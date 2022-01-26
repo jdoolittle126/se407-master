@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlockbusterLibrary\BlockbusterLibrary.csproj" />
+    <ProjectReference Include="..\BlockbusterLibrary\BlockBusterLibrary.csproj" />
   </ItemGroup>
 
 </Project>

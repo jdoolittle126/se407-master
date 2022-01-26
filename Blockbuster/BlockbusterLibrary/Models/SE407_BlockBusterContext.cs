@@ -4,12 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace BlockbusterLibrary.Models
+namespace BlockBusterLibrary.Models
 {
     public partial class SE407_BlockBusterContext : DbContext
     {
         public SE407_BlockBusterContext()
         {
+            
         }
 
         public SE407_BlockBusterContext(DbContextOptions<SE407_BlockBusterContext> options)
@@ -25,10 +26,12 @@ namespace BlockbusterLibrary.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=sql.neit.edu,4500;User Id=SE407_BlockBuster;Password=Bl0ckBu$t3r;Database=SE407_BlockBuster;");
+                // Omitted for GitHub... When we create a web project, OnConfiguring can be delegated to the 
+                // start-up and added under services
+                optionsBuilder.UseSqlServer("");
             }
         }
 
