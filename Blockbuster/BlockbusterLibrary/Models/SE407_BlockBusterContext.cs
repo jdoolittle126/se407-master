@@ -29,9 +29,17 @@ namespace BlockBusterLibrary.Models
 
             if (!optionsBuilder.IsConfigured)
             {
-                // Omitted for GitHub... When we create a web project, OnConfiguring can be delegated to the 
-                // start-up and added under services
-                optionsBuilder.UseSqlServer("");
+
+                Utils.EnvironmentUtilities.Init();
+                var connectionString = Environment.GetEnvironmentVariable("BLOCKBUSTER_CONNECTION_STRING");
+
+                if (connectionString is null)
+                {
+                    throw new Exception("No connection string provided!");
+                }
+
+                optionsBuilder.UseSqlServer();
+
             }
         }
 
