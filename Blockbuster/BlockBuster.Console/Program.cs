@@ -12,7 +12,9 @@ namespace BlockBuster.Console
         private static void Main(string[] args)
         {
             OutputHelper o = new OutputHelper();
-            o.WriteToConsole(BlockBusterLibrary.BlockBusterBasicFunctions.GetAllMovies());
+            //o.WriteToConsole();
+            var test = BlockBusterLibrary.BlockBusterBasicFunctions.GetAllMovies();
+            System.Console.ReadKey();
         }
     }
 }

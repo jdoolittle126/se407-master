@@ -18,14 +18,14 @@ namespace BlockBusterLibrary.Utils
 
             foreach (string entry in File.ReadAllLines(path))
             {
-                string[] keyValue = entry.Split("=", StringSplitOptions.RemoveEmptyEntries);
-                if (keyValue.Length == 2)
+                var index = entry.IndexOf("=");
+
+                if (index != -1)
                 {
-                    Environment.SetEnvironmentVariable(keyValue[0], keyValue[1]);
+                    Environment.SetEnvironmentVariable(entry.Substring(0, index), entry.Substring(index+1));
                 }
             }
 
-            Console.WriteLine(Environment.GetEnvironmentVariable("BLOCKBUSTER_CONNECTION_STRING"));
         }
 
         private static string GetDefaultPath()

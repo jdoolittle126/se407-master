@@ -38,7 +38,7 @@ namespace BlockBusterLibrary.Models
                     throw new Exception("No connection string provided!");
                 }
 
-                optionsBuilder.UseSqlServer();
+                optionsBuilder.UseSqlServer(connectionString);
 
             }
         }
