@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BlockBuster.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "--help --csv movie_list.csv -s"
+    }
+  }
+}
