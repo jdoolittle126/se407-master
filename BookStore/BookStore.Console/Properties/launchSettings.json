@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BookStore.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "--csv books.csv"
+    }
+  }
+}
