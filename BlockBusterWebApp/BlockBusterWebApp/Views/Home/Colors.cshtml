@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["title"] = "Colors";
+}
+
+<h1>@ViewData["title"]</h1>
+
+<p>The following list are a few colors.</p>
+
+<ul>
+    @foreach (var color in ViewData["colors"] as List<string>)
+    {
+        <li>@color</li>
+    }
+</ul>

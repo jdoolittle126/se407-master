@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["title"] = "Hobbies";
+}
+
+<h1>@ViewData["title"]</h1>
+
+<p>These are my hobbies!</p>
+
+<ul>
+    @foreach (var hobby in ViewData["hobbies"] as List<string>)
+    {
+        <li>@hobby</li>
+    }
+</ul>
