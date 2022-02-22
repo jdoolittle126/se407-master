@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using BlockBusterLibrary;
 
 namespace BlockBusterWebApp.Controllers
 {
@@ -69,8 +70,22 @@ namespace BlockBusterWebApp.Controllers
             };
             ViewBag.movies = movies;
             return View();
-        }       
-        
+        }
+
+        public IActionResult Inventory()
+        {
+            var movieList = BlockBusterBasicFunctions.GetAllMoviesFull();
+
+            return View(movieList);
+        }
+
+        public IActionResult CheckedOut()
+        {
+            var transactions = BlockBusterBasicFunctions.GetCheckedOutMovies();
+
+            return View(transactions);
+        }
+
         public IActionResult Cities()
         {
             List<string> cities = new List<string>
