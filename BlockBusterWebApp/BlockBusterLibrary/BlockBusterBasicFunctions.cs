@@ -21,12 +21,63 @@ namespace BlockBusterLibrary
         /// </summary>
         /// <param name="id">The movie's ID</param>
         /// <returns>The requested movie, or null if the ID does not exist</returns>
-        public static Movie GetMoveById(int id)
+        public static Movie GetMovieById(int id)
         {
             try
             {
                 using var context = new SE407_BlockBusterContext();
                 return context.Movies.Find(id);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Retrieves a <see cref="Movie"/> from the SE407 BlockBuster
+        /// database by ID
+        /// </summary>
+        /// <param name="id">The movie's ID</param>
+        /// <returns>The requested movie, or null if the ID does not exist</returns>
+        public static Movie GetMovieByIdFull(int id)
+        {
+            try
+            {
+                using var context = new SE407_BlockBusterContext();
+                return context.Movies
+                    .Include(m => m.Director)
+                    .Include(m => m.Genre)
+                    .FirstOrDefault(m => m.MovieId == id);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
+
+        public static List<Genre> GetAllGenres()
+        {
+            try
+            {
+                using var context = new SE407_BlockBusterContext();
+                return context.Genres.ToList();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
+
+        public static List<Director> GetAllDirectors()
+        {
+            try
+            {
+                using var context = new SE407_BlockBusterContext();
+                return context.Directors.ToList();
             }
             catch (Exception e)
             {
