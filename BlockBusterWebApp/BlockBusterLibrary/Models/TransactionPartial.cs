@@ -7,7 +7,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlockbusterLibrary.Models
+namespace BlockBusterLibrary.Models
 {
     [ModelMetadataType(typeof(TransactionMetaData))]
     public partial class Transaction

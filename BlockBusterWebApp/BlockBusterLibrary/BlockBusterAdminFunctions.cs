@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BlockBusterLibrary.Models;
 
-namespace BlockbusterLibrary
+namespace BlockBusterLibrary
 {
     public class BlockBusterAdminFunctions
     {

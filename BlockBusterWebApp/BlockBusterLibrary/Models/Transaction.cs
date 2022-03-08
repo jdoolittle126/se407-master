@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using BlockbusterLibrary.Models;
+using BlockBusterLibrary.Models;
 using Microsoft.AspNetCore.Mvc;
 
 #nullable disable
