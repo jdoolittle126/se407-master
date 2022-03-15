@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace BlockBusterLibrary.Utils
+namespace BookStore.Library.Utils
 {
     public static class EnvironmentUtilities
     {
@@ -22,7 +26,7 @@ namespace BlockBusterLibrary.Utils
 
                 if (index != -1)
                 {
-                    Environment.SetEnvironmentVariable(entry.Substring(0, index), entry.Substring(index+1));
+                    Environment.SetEnvironmentVariable(entry.Substring(0, index), entry.Substring(index + 1));
                 }
             }
 
@@ -31,8 +35,7 @@ namespace BlockBusterLibrary.Utils
         private static string GetDefaultPath()
         {
             // SPECIFIC FOR THIS PROJECT STRUCTURE!!
-            Console.WriteLine(Path.GetFullPath(@"..\..\..\..\"));
-            return Path.GetFullPath(@"..\..\..\..\");
+            return Path.GetFullPath("P:/");
         }
 
     }
